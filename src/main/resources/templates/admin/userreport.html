@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Student Report</title>
+    <link rel="stylesheet" href="http://localhost:8080/css/style.css">
+</head>
+<body>
+    
+    
+    <table border="2px">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Sign In Time</th>
+                <th>Sign Out Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr  data-th-each="at:${stud}">
+                <td data-th-text="${at.date}"></td>
+                <td data-th-text="${at.sign_in_time}"></td>
+                <td data-th-text="${at.sign_out_time}"></td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <a data-th-href="@{/admin/report}" class="cols" style="margin-top: 30px;">Back to User Reports</a>
+</body>
+</html>

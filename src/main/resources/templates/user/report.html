@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Report</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <h2> <span data-th-text="${username}"></span> - Dashboard</h2>
+    <table border="2px">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Sign In Time</th>
+                <th>Sign Out Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr  data-th-each="at:${userReport}">
+                <td data-th-text="${at.date}"></td>
+                <td data-th-text="${at.sign_in_time}"></td>
+                <td data-th-text="${at.sign_out_time}"></td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <!-- <table>
+        <tr>
+            <td>
+                <p ></p>
+                <p>Sign In - <span  data-th-text="${at.sign_in_time}"></span></p>
+                <p>Sign Out - <span ></span></p>
+                <hr>
+            </td>
+        </tr>
+    </table> -->
+
+    <div class="btns"><a data-th-href="@{/user/dashboard}">Back to Dashbaord</a></div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@400..800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="box">
+        <h2> Login Form</h2>
+        <p data-th-if="${param.error}" class="errorBig">Invalid Username/ Password</p>
+        <p data-th-if="${param.logout}" class="greenerror">Your Have Been Logout Successfully</p>
+    <hr>
+    <form data-th-action="@{/authenticate}" method="post">
+        <label> Username:</label>
+        <input type="text" name="username"><br><br>
+        <label> Password:</label>
+        <input type="password" name="password"><br><br>
+        <div class="btns">
+            <button type="submit">Login</button>
+           <a data-th-href="@{/register}">Register</a>
+        </div>
+
+    </form>
+
+    </div>
+
+</body>
+</html>

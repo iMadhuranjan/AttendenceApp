@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin reports</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <table border="2px">
+        <thead>
+            <tr>
+                <th>Username</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr data-th-each="users:${allusers}">
+                <td data-th-text="${users.username}"></td>
+                <td><a data-th-href="@{/admin/user/{id}(id=${users.username})}" class="">View Report</a></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a data-th-href="@{/user/dashboard}" class="cols" style="margin-top: 30px;">Back to Dashbaord</a>
+</body>
+</html>

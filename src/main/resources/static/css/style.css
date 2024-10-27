@@ -1,0 +1,151 @@
+.box{
+    /* background-color: red; */
+    display: inline-block;
+    flex-direction: column;
+    width: 20%;
+    border: 2px solid black;
+    justify-content: center;
+    /* gap: 30px; */
+    align-items: center;
+    padding: 30px;
+    border-radius: 40px;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    flex-direction: column;
+}
+
+h2{
+    font-size: 30px;
+}
+
+label{
+    font-size: 20px;
+    padding-bottom: 5px;
+    display: block;
+    font-weight: bold;
+}
+
+input{
+    width: 90%;
+    padding: 12px 20px;
+    /* padding-bottom: 2px; */
+    margin: 8px 0;
+    border-radius: 10px;
+    font-size: 17px;
+    box-sizing: border-box;
+  }
+
+  button, .btn{
+    background-color: rgb(12, 119, 227);
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+    border: 2px solid black;
+    border-radius: 20px;
+    text-decoration: none;
+  }
+
+  
+  .btns{
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 10px;
+  }
+
+  .btns a{
+    background-color: rgb(12, 119, 227);
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+    border: 2px solid black;
+    border-radius: 20px;
+    text-decoration: none;
+  }
+
+  .error{
+    font-size: 15px;
+    color: red;
+    padding-top: -10px;
+    margin-top: 0px;
+    padding-bottom: 10px;
+  }
+
+  .errorBig{
+    font-size: 19px;
+    color: red;
+    font-weight: bold;
+  }
+
+  .greenerror{
+    font-size: 19px;
+    color: rgb(152, 122, 0);
+    font-weight: bold;
+  }
+
+  h4{
+    font-size: 20px;
+  }
+
+  .reportbtn
+  {
+    background-color: rgb(227, 12, 141);
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+    margin-top: 60px;
+    border: 2px solid black;
+    border-radius: 10px;
+    text-decoration: none;
+    margin-bottom: 20px;
+  }
+
+  .top{
+    margin-top: 30px;
+  }
+
+  .m3{
+    margin: 10px;
+    margin-bottom: 20px;
+  }
+
+  /* // Table Style CSS  */
+
+
+  table {
+    border-collapse: collapse;
+  }
+
+  th, td {
+    padding: 5px 10px;
+    text-align: left;
+  }
+
+.col{
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
+.cols{
+  background-color: rgb(227, 12, 141);
+  padding: 10px 20px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  color: white;
+  border: 2px solid black;
+  border-radius: 10px;
+  text-decoration: none;
+  margin-bottom: 20px;
+}

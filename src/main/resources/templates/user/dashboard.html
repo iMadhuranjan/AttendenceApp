@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" 
+xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity6"
+>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Dashboard</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+
+   <div class="box">
+    <h2>Attendence</h2>
+        <div class="m3"><a data-th-href="@{/logout}" class="reportbtn">Logout</a></div>
+    <hr>
+    <h4 >Date : <span data-th-text="*{date}"></span></h4>
+    <h4 >Date : <span data-th-text="*{time}"></span></h4>
+    <div>
+        <form data-th-action="@{/user/signin}" method="post" data-th-if="${!isSignIn}">
+            <button type="submit ">Sign in</button>
+        </form>
+    </div>
+    <div>
+        <form data-th-action="@{/user/signout}" method="post" data-th-if="${isSignIn}">  
+            <button type="submit ">Sign out</button>  
+    </form>
+    </div>
+    <div class="top"><a data-th-href="@{/user/reports}" class="reportbtn">view Report</a></div>
+
+    <div sec:authorize="hasRole('ADMIN')">
+
+        <h2 sec:authorize="hasRole('ADMIN')">Admin View Only</h2>
+       
+    <hr>
+        <div class="col" sec:authorize="hasRole('ADMIN')">
+            <a data-th-href="@{/admin/report}" class="cols">View User Date</a>
+        
+        </div>
+    </div>
+
+   </div>
+   
+</body>
+</html>
